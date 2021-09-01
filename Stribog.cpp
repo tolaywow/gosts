@@ -7,6 +7,7 @@
 void Stribog::form_signature(unsigned __int8* message,unsigned __int8* signature, unsigned __int8* key)
 {
 	//TODO
+
 }
 
 bool Stribog::verification_signature(unsigned __int8* message, unsigned __int8* signature, unsigned __int8* key)
@@ -28,15 +29,15 @@ Stribog::Stribog(unsigned __int16* size = 0)
 {
 	if (*size == 0x100)
 	{
-		IV = new unsigned __int8[0x200]{ 0 };
+		IV = new unsigned __int8[0x100]{ 0 };//0x200
 		IV[0] = 0x1;
 		IV[0x40] = 0x1;
 		IV[0x80] = 0x1;
 		IV[0xc0] = 0x1;
-		IV[0x100] = 0x1;
+		/*IV[0x100] = 0x1;
 		IV[0x140] = 0x1;
 		IV[0x180] = 0x1;
-		IV[0x1c0] = 0x1;
+		IV[0x1c0] = 0x1;*/
 	}
 	else
 	{
