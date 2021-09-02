@@ -44,8 +44,8 @@ public:
     ~Stribog();
 protected:
     virtual unsigned __int64 multiplicate(unsigned __int64* b);
-    //virtual void substitution_pi(unsigned __int8* V);//not int8 
-    virtual void X(unsigned __int8* key, unsigned __int8* block);
-    virtual void S(unsigned __int8* block);
+    virtual void X(unsigned __int8* key, unsigned __int8* block);//X512
+    virtual void S(unsigned __int8* block);//S512
+    virtual void P(unsigned __int8* block);//P512
     unsigned __int8* IV;
 };
