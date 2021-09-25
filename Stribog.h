@@ -41,11 +41,16 @@ public:
     virtual void form_signature(unsigned __int8* message, unsigned __int8* signature, unsigned __int8* key);
     virtual bool verification_signature(unsigned __int8* message, unsigned __int8* signature, unsigned __int8* key);
     Stribog(unsigned __int16* size = 0);
+    Stribog();
     ~Stribog();
 protected:
     virtual unsigned __int64 multiplicate(unsigned __int64* b);
     virtual void X(unsigned __int8* key, unsigned __int8* block);//X512
     virtual void S(unsigned __int8* block);//S512
     virtual void P(unsigned __int8* block);//P512
+    virtual void gN(unsigned __int8* h, unsigned __int8* m);//TODO
     unsigned __int8* IV;
+    /*unsigned __int8* h;
+    unsigned __int8 N[0x40] = { 0 };
+    unsigned __int8 Esumm[0x40] = { 0 };*/
 };
